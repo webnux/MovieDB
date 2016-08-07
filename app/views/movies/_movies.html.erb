@@ -1,0 +1,12 @@
+<table class="table">
+  <tr>
+    <th> Title </th>
+    <th> Description </th>
+    <th> Category </th>
+    <th> Rate </th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render "list", {movies: @movies} %>
+</table>
+<%= will_paginate @posts %>

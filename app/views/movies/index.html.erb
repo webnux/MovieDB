@@ -1,0 +1,10 @@
+<%= javascript_include_tag "movies_search" %>
+<h1>Movies</h1>
+
+<%= form_tag movies_path, :method => 'get', :id => "movies_search" do %>
+  <%= render 'search_fields' %>
+  <div>
+    <%= link_to "New Movie", new_movie_path, class: 'btn btn-primary' %>
+  </div>
+  <div id="movies"><%= render 'movies' %></div>
+<% end %>

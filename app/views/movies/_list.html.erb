@@ -1,0 +1,10 @@
+<% movies.each do |movie| %>
+  <tr>
+    <td><%= link_to movie.title, movie_path(movie) %></td>
+    <td><%= movie.description %></td>
+    <td><%= movie.category.name %></td>
+    <td><%= movie.average_rating %></td>
+    <td><%= link_to "Edit", edit_movie_path(movie), class: 'btn btn-xs btn-primary' %></td>
+    <td><%= link_to "Delete", movie_path(movie), method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
